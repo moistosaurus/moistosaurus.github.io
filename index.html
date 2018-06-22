@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Revenge of the Fallen</title>	
-<link rel="icon" href="icon_web.png"; />
-<body bgcolor="#000000">
-<center>
-<embed src="client.swf?build=release" pluginspage="http://www.macromedia.com/go/getfashplayer" type="application/x-shockwave-flash" width="800" height="600">
-</center>
-</body>
+	<head>
+		<title>Revenge of the Fallen</title>	
+		<link rel="icon" href="icon_web.png"; />
+		<link rel="stylesheet" href="w3.css">
+		<style>
+			body, html {
+				height: 100%;
+				margin: 0;
+			}
+
+			.bg {
+				background-image: url("websclient_background.png");
+				height: 100%; 
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+
+			}
+			
+			.clientFrame {
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 100%;
+				z-index: 2;
+			}
+			
+			img {
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			
+			.frame {
+				  position: fixed;
+				  top: 50%;
+				  left: 50%;
+				  /* bring your own prefixes */
+				  transform: translate(-50%, -50%);
+			}
+			
+			.client {
+				  position: fixed;
+				  top: 50%;
+				  left: 50%;
+				  /* bring your own prefixes */
+				  transform: translate(-50%, -36.5%);
+			}
+		</style>
+	</head>
+	<body class="bg">
+		<div class="client">
+			<embed src="client.swf?build=release" pluginspage="http://www.macromedia.com/go/getfashplayer" type="application/x-shockwave-flash" width="800" height="600">
+		</div>
+		<div class="frame">
+			<img class="clientFrame" src="client_outline.png" alt="frame" draggable="false"/>
+		</div>
+	</body>
 </html>
