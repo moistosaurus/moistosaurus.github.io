@@ -8,55 +8,49 @@
 			body, html {
 				height: 100%;
 				margin: 0;
+				overflow:hidden;
 			}
 
 			.bg {
-				background-image: url("websclient_background.png");
-				height: 100%; 
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
+				background-image: url("background.jpg");
 
 			}
 			
-			.clientFrame {
-				background-position: center;
-				background-repeat: no-repeat;
-				height: 100%;
-				z-index: 2;
+			.contGrid {
+				margin-top: 15px;
+				width: 810px;
+				height: 672px;
+				background-image: url("container.jpg");
+				position: relative;
+				padding: 3px;
+				display: inline-block;
+				border-radius: 7px;
 			}
 			
-			img {
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-o-user-select: none;
-				user-select: none;
+			.text {
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-weight:normal;
+				letter-spacing:12px;
+				font-weight: 300;
+				font-size: 1.5rem;
 			}
 			
-			.frame {
-				  position: fixed;
-				  top: 50%;
-				  left: 50%;
-				  /* bring your own prefixes */
-				  transform: translate(-50%, -50%);
-			}
-			
-			.client {
-				  position: fixed;
-				  top: 50%;
-				  left: 50%;
-				  /* bring your own prefixes */
-				  transform: translate(-50%, -36.5%);
+			.textS {
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-weight:lighter;
+				letter-spacing:10px;
+				font-size: 1.2rem;
 			}
 		</style>
 	</head>
 	<body class="bg">
-		<div class="frame">
-			<img class="clientFrame" src="client_outline.png" alt="frame" draggable="false"/>
+		<center>
+		
+		<div class="w3-container contGrid">
+			<span class="text">REVENGE OF THE FALLEN</span>
+			<embed src="client.swf?build=release" pluginspage="http://www.macromedia.com/go/getfashplayer" type="application/x-shockwave-flash" width="800" height="600">	
+			<span class="textS">ENJOY YOUR STAY!</span>
 		</div>
-		<div class="client">
-			<embed src="client.swf?build=release" pluginspage="http://www.macromedia.com/go/getfashplayer" type="application/x-shockwave-flash" width="800" height="600">
-		</div>
+		</center>
 	</body>
 </html>
